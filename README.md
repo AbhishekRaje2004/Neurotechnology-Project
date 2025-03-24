@@ -1,2 +1,2 @@
 # Neurotechnology_Project
-This is the repository for neurotechnology &amp; BCI Lab project. 
+This is the repository for the neurotechnology &amp; BCI Lab project. 
