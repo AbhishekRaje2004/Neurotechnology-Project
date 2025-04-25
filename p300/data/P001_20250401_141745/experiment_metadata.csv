@@ -1,0 +1,11 @@
+participant_id,P001
+session_id,20250401_141745
+date_time,2025-04-01 14:18:05
+board_size,6
+total_flips,2
+flip_interval_min,1.0
+flip_interval_max,3.0
+flash_duration,0.5
+total_samples,0
+serial_connected,False
+arduino_port,COM4
