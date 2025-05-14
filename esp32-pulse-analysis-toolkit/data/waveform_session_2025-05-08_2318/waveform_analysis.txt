@@ -1,0 +1,111 @@
+WAVEFORM DATA ANALYSIS REPORT
+============================
+
+Analysis performed: 2025-05-08 23:19:12
+Data collection session: session_2025-05-08_2318
+Total samples analyzed: 189460
+
+Total pulses detected: 9
+Sample interval: 248.04 탎
+Expected pulse width: 300.0 탎
+Average samples per pulse: 7.3
+
+PULSE WIDTH STATISTICS
+---------------------
+Average width: 803.78 탎
+Width std dev: 83.98 탎
+Min width: 639.00 탎
+Max width: 890.00 탎
+Avg error from expected: +167.93%
+
+TIMING STATISTICS
+----------------
+Note: Rise time measured from first crossing to peak
+      Fall time measured from peak to last crossing
+
+Average rise time: 0.00 탎
+Rise time std dev: 0.00 탎
+Average fall time: 803.78 탎
+Fall time std dev: 83.98 탎
+
+VOLTAGE STATISTICS
+-----------------
+Average peak voltage: 1.922 V
+Peak voltage std dev: 0.037 V
+Min peak voltage: 1.841 V
+Max peak voltage: 1.969 V
+
+INDIVIDUAL PULSE DETAILS (First 10)
+---------------------------------
+Pulse #1:
+  Width: 758.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 758.00 탎 (from peak)
+  Peak voltage: 1.921 V
+  Samples in pulse: 7
+  Error vs expected: +152.67%
+
+Pulse #2:
+  Width: 764.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 764.00 탎 (from peak)
+  Peak voltage: 1.901 V
+  Samples in pulse: 7
+  Error vs expected: +154.67%
+
+Pulse #3:
+  Width: 639.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 639.00 탎 (from peak)
+  Peak voltage: 1.841 V
+  Samples in pulse: 6
+  Error vs expected: +113.00%
+
+Pulse #4:
+  Width: 761.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 761.00 탎 (from peak)
+  Peak voltage: 1.899 V
+  Samples in pulse: 7
+  Error vs expected: +153.67%
+
+Pulse #5:
+  Width: 889.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 889.00 탎 (from peak)
+  Peak voltage: 1.933 V
+  Samples in pulse: 8
+  Error vs expected: +196.33%
+
+Pulse #6:
+  Width: 890.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 890.00 탎 (from peak)
+  Peak voltage: 1.969 V
+  Samples in pulse: 8
+  Error vs expected: +196.67%
+
+Pulse #7:
+  Width: 888.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 888.00 탎 (from peak)
+  Peak voltage: 1.953 V
+  Samples in pulse: 8
+  Error vs expected: +196.00%
+
+Pulse #8:
+  Width: 758.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 758.00 탎 (from peak)
+  Peak voltage: 1.922 V
+  Samples in pulse: 7
+  Error vs expected: +152.67%
+
+Pulse #9:
+  Width: 887.00 탎
+  Rise time: 0.00 탎 (to peak)
+  Fall time: 887.00 탎 (from peak)
+  Peak voltage: 1.957 V
+  Samples in pulse: 8
+  Error vs expected: +195.67%
+

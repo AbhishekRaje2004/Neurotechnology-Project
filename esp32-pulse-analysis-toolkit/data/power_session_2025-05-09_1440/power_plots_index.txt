@@ -1,0 +1,37 @@
+POWER ANALYSIS VISUALIZATION FILES
+===============================
+
+Session: power_session_2025-05-09_1440
+Generated: 2025-05-09 14:41:16
+
+TIME SERIES PLOTS
+--------------
+1. Internal Resistance Plot
+   Path: plots/power_resistance.png
+
+2. Power Consumption Plot
+   Path: plots/power_power.png
+
+3. Current Plot
+   Path: plots/power_current.png
+
+4. Voltage Plot
+   Path: plots/power_voltage.png
+
+DISTRIBUTION HISTOGRAMS
+----------------------
+5. Internal Resistance Histogram
+   Path: plots/power_resistance_hist.png
+
+6. Power Distribution Histogram
+   Path: plots/power_power_hist.png
+
+7. Current Distribution Histogram
+   Path: plots/power_current_hist.png
+
+8. Voltage Distribution Histogram
+   Path: plots/power_voltage_hist.png
+
+9. Combined Distribution Histograms
+   Path: plots/power_distributions.png
+

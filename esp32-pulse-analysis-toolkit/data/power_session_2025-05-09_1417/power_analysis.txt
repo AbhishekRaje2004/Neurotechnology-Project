@@ -1,0 +1,38 @@
+POWER ANALYSIS REPORT
+====================
+
+Analysis performed: 2025-05-09 14:18:44
+Data collection session: session_2025-05-09_1417
+Total pulses detected: 61
+
+CONFIGURATION
+-------------
+Pulse Voltage: 5.000 V
+Known Resistor: 470.0 ohm
+Total Known Resistance: 940.0 ohm
+
+INTERNAL RESISTANCE STATISTICS
+-----------------------------
+Average: 359.58 ohm
+Minimum: 300.22 ohm
+Maximum: 414.57 ohm
+Standard Deviation: 34.52 ohm
+
+POWER STATISTICS
+---------------
+Average Power: 0.070173 W
+Minimum Power: 0.060303 W
+Maximum Power: 0.083273 W
+Standard Deviation: 0.006891 W
+
+CURRENT STATISTICS
+-----------------
+Average Current: 0.003850 A
+Minimum Current: 0.003691 A
+Maximum Current: 0.004032 A
+Standard Deviation: 0.000103 A
+
+ENERGY CONSUMPTION
+-----------------
+Total Energy: 4.163156 J
+Session Duration: 59.30 s

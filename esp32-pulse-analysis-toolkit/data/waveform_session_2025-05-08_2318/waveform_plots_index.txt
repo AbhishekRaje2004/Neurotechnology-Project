@@ -1,0 +1,21 @@
+WAVEFORM DATA VISUALIZATION FILES
+===============================
+
+Session: session_2025-05-08_2318
+Generated: 2025-05-08 23:19:12
+
+1. All Pulses Plot
+   Path: plots/waveform_all_pulses.png
+
+2. Pulse Width Distribution
+   Path: plots/waveform_width_hist.png
+
+3. Rise/Fall Time Distribution
+   Path: plots/waveform_timing_hist.png
+
+4. Peak Voltage Distribution
+   Path: plots/waveform_voltage_hist.png
+
+5. Samples Per Pulse Distribution
+   Path: plots/waveform_samples_hist.png
+

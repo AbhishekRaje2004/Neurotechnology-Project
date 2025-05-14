@@ -1,0 +1,12 @@
+Metric,Value,Unit,Note
+Expected Period,800.0,ms,Configured
+Average Period,1022.3448275862069,ms,Measured
+Min Period,859,ms,Measured
+Max Period,1719,ms,Measured
+Period Standard Deviation,339.6607983786662,ms,Jitter
+Pulse Count,58,pulses,Total
+Mean Voltage,0.004505524439388633,V,Includes 2x multiplier
+Min Voltage,0.0,V,Includes 2x multiplier
+Max Voltage,4.461245421245422,V,Includes 2x multiplier
+Voltage Range,4.461245421245422,V,Max - Min
+Voltage Standard Deviation,0.13475065501520475,V,Signal variation

@@ -1,0 +1,33 @@
+PULSE DATA ANALYSIS REPORT
+==========================
+
+Analysis performed: 2025-05-08 15:50:36
+Data collection session: session_2025-05-08_1549
+
+TIMING ANALYSIS
+--------------
+Total pulses detected: 60
+Average pulse period: 1002.58 ms
+Expected pulse period: 800.00 ms
+Deviation from expected: 202.58 ms
+
+PULSE INTERVAL STATISTICS
+------------------------
+Minimum interval: 859.00 ms
+Maximum interval: 1719.00 ms
+Standard deviation: 322.96 ms
+
+VOLTAGE STATISTICS
+------------------
+Mean voltage: 0.005 V
+Peak voltage: 4.527 V
+Minimum voltage: 0.000 V
+Voltage range: 4.527 V
+Voltage standard deviation: 0.142 V
+Note: Voltage values reflect actual voltages (2x the measured values)
+
+
+INTERVAL STABILITY ANALYSIS
+-------------------------
+Interval stability: 67.8% (lower std dev = higher stability)
+Average frequency: 0.997 Hz (59.8 BPM)
