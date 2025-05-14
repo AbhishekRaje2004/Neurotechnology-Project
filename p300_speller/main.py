@@ -18,7 +18,7 @@ from stimulus import run_oddball_task, run_p300_calibration
 from visualization import LiveEEGPlotter, EpochViewer, save_experiment_data, load_experiment_data
 
 # Path to save/load model
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "p300_model.pkl")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "data", "p300_model.pkl")
 
 def run_calibration(port='COM4', visualize=True):
     """Run P300 calibration session with visualization"""
@@ -30,8 +30,8 @@ def run_calibration(port='COM4', visualize=True):
         print("Failed to connect to Arduino")
         return False
     
-    # Create PsychoPy window - fullscreen mode
-    win = visual.Window(fullscr=True, color='black', allowGUI=False)
+    # Create PsychoPy window - windowed mode with white background
+    win = visual.Window(size=(800, 600), color='white', fullscr=False)
     
     # Create P300 classifier
     classifier = P300Classifier()
@@ -57,11 +57,11 @@ def run_calibration(port='COM4', visualize=True):
     # Create speller instance
     speller = P300Speller(win, acq.ser, classifier)
     
-    # Calibration intro text with larger font
+    # Calibration intro text with larger font (black for white background)
     intro = visual.TextStim(win, text="P300 Calibration\n\nYou will be shown a sequence of characters to focus on.\n"
                            "When a character is highlighted, focus on it and count each time it flashes.\n\n"
                            "Press any key to begin\nPress ESC at any time to exit", 
-                           color='white', height=0.08)  # Increased text size
+                           color='black', height=0.08)  # Increased text size, black color
     intro.draw()
     win.flip()
     keys = event.waitKeys()
@@ -77,10 +77,10 @@ def run_calibration(port='COM4', visualize=True):
     
     try:
         for target in calibration_targets:
-            # Show target instruction with larger font
+            # Show target instruction with larger font (black for white background)
             instr = visual.TextStim(win, text=f"Focus on the letter '{target}'\nand mentally count each time it flashes.\n\n"
                                   "Press any key when ready\nPress ESC to exit", 
-                                  color='white', height=0.08)  # Increased text size
+                                  color='black', height=0.08)  # Black text
             instr.draw()
             win.flip()
             keys = event.waitKeys()
@@ -114,9 +114,9 @@ def run_calibration(port='COM4', visualize=True):
             all_epochs.extend(epochs)
             all_labels.extend(labels)
             
-            # Short break
+            # Short break (black text for white background)
             rest = visual.TextStim(win, text="Good job! Take a short break.\n\nPress any key when ready for the next target\nPress ESC to exit", 
-                                color='white', height=0.08)  # Increased text size
+                                color='black', height=0.08)  # Black text
             rest.draw()
             win.flip()
             keys = event.waitKeys()
@@ -199,7 +199,7 @@ def run_calibration(port='COM4', visualize=True):
         print(f"Error saving model: {e}")
     
     completed = visual.TextStim(win, text="Calibration complete!\n\nPress any key to exit", 
-                              color='white', height=0.08)  # Increased text size
+                              color='black', height=0.08)  # Black text for white background
     completed.draw()
     win.flip()
     event.waitKeys()
@@ -271,8 +271,8 @@ def run_speller(classifier, port='COM4', visualize=True):
         print("Failed to connect to Arduino")
         return
     
-    # Create PsychoPy window
-    win = visual.Window(fullscr=True, color='black')
+    # Create PsychoPy window - windowed mode with white background
+    win = visual.Window(size=(800, 600), color='white', fullscr=False)
     
     # Create speller interface
     speller = P300Speller(win, acq.ser, classifier)
@@ -280,11 +280,11 @@ def run_speller(classifier, port='COM4', visualize=True):
     # Start EEG acquisition
     acq.start_acquisition()
     
-    # Speller intro text
+    # Speller intro text (black text for white background)
     intro = visual.TextStim(win, text="P300 Speller\n\nFocus on the character you want to type\n"
                            "and mentally count each time it flashes.\n\n"
                            "Press any key to begin\nPress Escape at any time to exit", 
-                           color='white', height=0.05)
+                           color='black', height=0.05)
     intro.draw()
     win.flip()
     event.waitKeys()
@@ -362,10 +362,10 @@ def run_speller(classifier, port='COM4', visualize=True):
             # Add the detected character
             speller.add_character(selected_char)
             
-            # Show feedback
+            # Show feedback (dark green for visibility on white background)
             feedback = visual.TextStim(win, 
                                      text=f"Selected: {selected_char} (confidence: {confidence:.2f})",
-                                     pos=[0, -0.8], color='green', height=0.05)
+                                     pos=[0, -0.8], color='darkgreen', height=0.05)
             feedback.draw()
             speller.text_display.draw()
             win.flip()
@@ -420,18 +420,18 @@ def run_demo(port='COM4', visualize=True):
         print("Failed to connect to Arduino")
         return
     
-    # Create PsychoPy window
-    win = visual.Window(fullscr=True, color='black')
+    # Create PsychoPy window - using windowed mode with white background
+    win = visual.Window(size=(800, 600), color='white', fullscr=False)
     
     # Start EEG acquisition
     acq.start_acquisition()
     
-    # Show introduction
+    # Show introduction with black text for visibility on white background
     intro = visual.TextStim(win, text="P300 Oddball Demo\n\n"
                           "You will see a series of blue circles (frequent)\n"
                           "and red squares (rare targets).\n\n"
                           "Please mentally count the red squares.\n\n"
-                          "Press any key to begin", color='white')
+                          "Press any key to begin", color='black')
     intro.draw()
     win.flip()
     event.waitKeys()

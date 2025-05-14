@@ -22,9 +22,9 @@ def run_oddball_task(win, ser, trials=100, live_visualization=None):
     event_log : list
         List of event timestamps and types [(timestamp, event_type), ...]
     """
-    # Create stimuli
-    stim_freq = visual.Circle(win, radius=0.1, fillColor='blue')
-    stim_rare = visual.Rect(win, width=0.2, height=0.2, fillColor='red')
+    # Create stimuli with darker colors for visibility on white background
+    stim_freq = visual.Circle(win, radius=0.1, fillColor='darkblue', lineColor='black')
+    stim_rare = visual.Rect(win, width=0.2, height=0.2, fillColor='darkred', lineColor='black')
     
     # Create stimulus sequence with appropriate target/non-target ratio
     # P300 is best detected with rare targets (15-20% of stimuli)
@@ -32,9 +32,9 @@ def run_oddball_task(win, ser, trials=100, live_visualization=None):
     stimuli = [0]*int(trials*(1-target_ratio)) + [1]*int(trials*target_ratio)
     random.shuffle(stimuli)
     
-    # Display instructions
+    # Display instructions with black text for visibility on white background
     instr = visual.TextStim(win, text="Focus on the red squares and mentally count them.\n\n"
-                           "Press any key to start.", color='white')
+                           "Press any key to start.", color='black')
     instr.draw()
     win.flip()
     event.waitKeys()
@@ -56,9 +56,9 @@ def run_oddball_task(win, ser, trials=100, live_visualization=None):
         # Draw the stimulus
         (stim_freq if stim_type == 0 else stim_rare).draw()
         
-        # Progress indicator
+        # Progress indicator - use black text for visibility on white background
         progress = visual.TextStim(win, text=f"{i+1}/{trials}",
-                                 pos=[0.9, 0.9], color='gray', height=0.03)
+                                 pos=[0.9, 0.9], color='black', height=0.03)
         progress.draw()
         
         # Display stimulus and send trigger
@@ -97,11 +97,11 @@ def run_oddball_task(win, ser, trials=100, live_visualization=None):
         if event.getKeys(['escape']):
             break
     
-    # Show completion message
+    # Show completion message with black text for visibility on white background
     completion = visual.TextStim(win, text=f"Task complete!\n\n"
                                f"Standard stimuli: {count_standard}\n"
                                f"Target stimuli: {count_target}\n\n"
-                               f"Press any key to continue.", color='white')
+                               f"Press any key to continue.", color='black')
     completion.draw()
     win.flip()
     event.waitKeys()

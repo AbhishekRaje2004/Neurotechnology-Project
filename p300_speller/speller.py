@@ -25,11 +25,11 @@ class P300Speller:
         self.spacing = 0.15
         self.setup_matrix()
         
-        # Text display
+        # Text display - using black text for white background
         self.text_output = ""
-        self.text_display = visual.TextStim(win, text="", pos=[0, -0.7], color='white', height=0.05)
+        self.text_display = visual.TextStim(win, text="", pos=[0, -0.7], color='black', height=0.05)
         self.instruction = visual.TextStim(win, text="Focus on the character you want to type", 
-                                          pos=[0, 0.7], color='white', height=0.05)
+                                          pos=[0, 0.7], color='black', height=0.05)
         
         # Flashing parameters
         self.flash_duration = 0.1
@@ -45,7 +45,7 @@ class P300Speller:
                 self.char_positions[char] = (row_idx, col_idx)
                 self.char_stims[char] = visual.TextStim(
                     self.win, text=char, pos=pos, 
-                    color='white', height=0.05
+                    color='black', height=0.05  # Black text for white background
                 )
                 x_pos += self.spacing
             y_pos -= self.spacing
@@ -109,21 +109,21 @@ class P300Speller:
         if idx < 6:  # Row
             for col in range(6):
                 char = self.matrix[idx][col]
-                self.char_stims[char].color = 'yellow'
+                self.char_stims[char].color = 'blue'  # Blue highlights for better contrast on white
                 self.char_stims[char].draw()
         else:  # Column
             col = idx - 6
             for row in range(6):
                 char = self.matrix[row][col]
-                self.char_stims[char].color = 'yellow'
+                self.char_stims[char].color = 'blue'  # Blue highlights for better contrast on white
                 self.char_stims[char].draw()
                 
-        # Draw the rest in white
+        # Draw the rest in black
         for r in range(6):
             for c in range(6):
                 char = self.matrix[r][c]
                 if (idx < 6 and r != idx) or (idx >= 6 and c != idx - 6):
-                    self.char_stims[char].color = 'white'
+                    self.char_stims[char].color = 'black'  # Black text for white background
                     self.char_stims[char].draw()
     
     def highlight_single(self, pos):
@@ -135,15 +135,15 @@ class P300Speller:
             for c in range(6):
                 char = self.matrix[r][c]
                 if r == row and c == col:
-                    self.char_stims[char].color = 'yellow'
+                    self.char_stims[char].color = 'blue'  # Blue highlights for better contrast on white
                 else:
-                    self.char_stims[char].color = 'white'
+                    self.char_stims[char].color = 'black'  # Black text for white background
                 self.char_stims[char].draw()
     
     def draw_matrix(self):
-        """Draw the full matrix in white"""
+        """Draw the full matrix in black text on white background"""
         for char, stim in self.char_stims.items():
-            stim.color = 'white'
+            stim.color = 'black'  # Black text for white background
             stim.draw()
         self.instruction.draw()
         self.text_display.draw()
@@ -217,16 +217,9 @@ class P300Speller:
         """Run calibration sequence with known target"""
         target_pos = self.char_positions[target_char]
         
-        # Make sure we're using fullscreen mode
-        current_fullscr = self.win.fullscr
-        if not current_fullscr:
-            self.win.fullscr = True
-            self.win.winHandle.maximize()
-            self.win._isFullScr = True
-        
-        # Highlight target briefly
+        # Highlight target briefly - using darker green for visibility on white background
         target_stim = self.char_stims[target_char]
-        target_stim.color = 'green'
+        target_stim.color = 'darkgreen'
         target_stim.draw()
         self.win.flip()
         core.wait(1.0)

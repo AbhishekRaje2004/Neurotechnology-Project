@@ -1,0 +1,15 @@
+# Ignore large data files
+*.pkl
+# Keep PDF files
+# *.pdf
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore system files
+.DS_Store
+
+# Ignore user-specific VS Code settings
+.vscode/
